@@ -1,0 +1,34 @@
+{
+  "name": "doctor-desktop-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "dependencies": {
+    "jspdf": "^2.5.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "electron": "^36.5.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.doctor.desktop",
+    "productName": "Doctor Desktop App",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "description": "Doctor Desktop App for managing patient information and prescriptions",
+  "license": "ISC",
+  "keywords": [],
+  "author": ""
+}

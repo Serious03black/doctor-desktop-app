@@ -1,0 +1,102 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6fb;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 40px;
+}
+
+h1, h2 {
+  color: #9bca1a; /* गहरा लाल */
+  margin-bottom: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, select, textarea, button {
+  font-size: 1rem;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border: 1.5px solid #ef4444; /* लाल */
+}
+
+button {
+  background: #ef4444; /* लाल */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #b91c1c; /* गहरा लाल */
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+th, td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+th {
+  background: #fee2e2; /* हल्का लाल */
+  color: #b91c1c;
+}
+
+.patient-name {
+  color: #ef4444; /* लाल */
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#search, #sort {
+  margin-bottom: 10px;
+}
+
+#prescription-section {
+  background: #fef2f2; /* बहुत हल्का लाल */
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 16px 8px;
+  }
+  table, th, td {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Desktop App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Doctor Desktop App</h1>
+
+    <!-- Add Patient Form -->
+    <section>
+      <h2>Add Patient</h2>
+      <form id="patient-form">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="number" id="age" placeholder="Age" required>
+        <select id="gender" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <input type="text" id="contact" placeholder="Contact Number" required>
+        <textarea id="medical_history" placeholder="Medical History"></textarea>
+        <button type="submit">Add Patient</button>
+      </form>
+    </section>
+
+    <!-- Search and Sort -->
+    <section>
+      <h2>Patients</h2>
+      <input type="text" id="search" placeholder="Search by name">
+      <select id="sort">
+        <option value="name">Sort by Name</option>
+        <option value="date_added">Sort by Date Added</option>
+      </select>
+      <table id="patient-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Contact</th>
+            <th>Medical History</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="patient-table-body"></tbody>
+      </table>
+    </section>
+
+    <!-- PDF Filters -->
+    <section>
+      <label>From: <input type="date" id="from-date"></label>
+      <label>To: <input type="date" id="to-date"></label>
+      <button id="download-all-data">Download All Data as PDF</button>
+    </section>
+
+    <!-- Prescription Form -->
+    <section id="prescription-section" style="display: none;">
+      <h2>Prescription for <span id="prescription-patient-name"></span></h2>
+      <textarea id="prescription-text" placeholder="Enter prescription"></textarea>
+      <button id="save-prescription">Save Prescription</button>
+      <button id="download-prescription">Download as PDF</button>
+      <h3>Previous Prescriptions</h3>
+      <ul id="prescription-list"></ul>
+    </section>
+  </div>
+
+  <script src="jspdf.min.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

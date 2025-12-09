@@ -1,0 +1,57 @@
+# ======================
+# GLOBAL
+# ======================
+node_modules/
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS / Editor garbage
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ======================
+# FRONTEND (React)
+# ======================
+/client/node_modules/
+/client/build/
+/client/.env.local
+/client/.env*
+
+# React build artifacts
+build/
+dist/
+
+# ======================
+# BACKEND (Node / Express)
+# ======================
+/server/node_modules/
+/server/.env
+/server/logs/
+tmp/
+coverage/
+.eslintcache
+
+# ======================
+# Mongo Stuff
+# ======================
+/data/db/
+*.pid
+*.sock
+
+# ======================
+# Production
+# ======================
+docker-compose.override.yml
+*.pem
